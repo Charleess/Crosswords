@@ -8,4 +8,8 @@ Simply run
 > python main.py
 ```
 
-You can change the source file for the crosswords
+You can change the source file for the crosswords directly in `main.py`
+
+## Constraint Programming
+
+`constraint_programming.py` was entirely developped by C. Dürr at Ecole Centrale Supélec.
