@@ -34,7 +34,7 @@ def parse_lines(matrix, orient):
     return lines, slots
 
 def get_letters(words_file):
-    with open(words_file, 'r') as file:
+    with open("src/{}".format(words_file), 'r') as file:
         letters = set()
         for line in file:
             for char in line.strip():
@@ -44,7 +44,7 @@ def get_letters(words_file):
     return letters
 
 def get_words(words_file):
-    with open(words_file, 'r') as file:
+    with open("src/{}".format(words_file), 'r') as file:
         words = set()
         for line in file:
             words.add("".join(c.lower() for c in line.strip()))
@@ -53,7 +53,7 @@ def get_words(words_file):
 
 def parser(crossword_file, words_file):
     # Read the file
-    with open(crossword_file, 'r') as file:
+    with open("src/{}".format(crossword_file), 'r') as file:
         matrix = [[char for char in line.strip()] for line in file.readlines()]
 
     lines, slots = parse_lines(matrix, "L")
@@ -72,7 +72,7 @@ def parser(crossword_file, words_file):
 
 def print_sol(sol, filename):
     screen = []
-    with open(filename, 'r') as file:
+    with open("src/{}".format(filename), 'r') as file:
         for i, line in enumerate(file):
             l = []
             for j, char in enumerate(line.strip()):
