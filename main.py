@@ -1,5 +1,6 @@
 """ DM1 """
 import numpy as np
+import time
 from constraint_programming import constraint_programming
 
 def parse_lines(matrix, orient):
@@ -130,4 +131,7 @@ def run():
 
 
 if __name__ == "__main__":
+    t0 = time.time()
     run()
+    t1 = time.time()
+    print("Completed in {}s".format(round(t1 - t0, 3)))

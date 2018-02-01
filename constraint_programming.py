@@ -39,7 +39,7 @@ class constraint_programming:
         self.conflict[y].append((x, {(v, u) for (u, v) in relation}))
 
     def maintain_arc_consistency(self):
-        self.maintain_AC = True
+        self.maintain_AC = False
 
     def solve(self, father=None):
         """Tente de compléter la solution partielle courante.
